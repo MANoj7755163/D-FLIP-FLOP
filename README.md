@@ -135,7 +135,7 @@ In a similar fashion, the hold time can be simulated. The D input edge is once a
 skewed relative to the clock signal till the circuit stop functioning. For this design, the hold
 time is 0 - i.e., the inputs can be changed on the clock edge.
 
-- Propagation Delay
+# Propagation Delay
 
 Finally, for the propagation
 delay, the inputs transition at least one set-up time before the rising edge of the clock and the
