@@ -8,11 +8,9 @@ The D flip flop is designed using 28nm CMOS technology by using Synopsys Custom 
 - INTRODUCTION
 - TOOLS USED
 - D FLIP FLOP CIRCUIT DESIGN
-- CMOS NAND GATE
-- CMOS INVERTER
-- CMOS D FLIP FLOP
+- DESIGNING ON SYNOPSYS TOOL
 - SETUP & HOLD TIME
-- POWER CALCULATION 
+- PROPAGATION DELAY 
 - SIMULATION RESULT
 - NETLIST
 - ACKNOWLEDGEMENT 
@@ -150,7 +148,41 @@ c-q(hl) was 49.5 psec.
 
 ![d1](https://user-images.githubusercontent.com/100668140/156168645-9e8918e6-3460-4d27-ac14-b68f2be702b6.PNG)
 
+# SIMULATION RESULT
 
+- Set up time = -144p sec
+- Hold time = 0 p sec
+- Propagation delay,tcq(lh) =  45.5 p sec
+                    tcq(hl) =  49.5 p sec 
+                    
+                    
+# AUTHOR
+MANOJ KUMAR SINGH,MEC2021027, MTech(2021-23) Microelectronics, Indian Institute of Information Technology,Allahabad
+
+# ACKNOWLEDGEMENT 
+
+- Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+- Synopsys, India
+- VLSI System Design(VSD) Corporation Private Limited India
+- Indian Institute of Technology, Hyderabad 
+- Cloud Based Analog IC Design Hackathon
+- Sameer Durgoji, NIT Karnataka
+- Chinmay panda, IIT Hyderabad
+- Dr. Kavindra Kandpal ,Assistant Professor,
+Department of Electronics and Communication Engineering, 
+Indian Institute of Information Technology- Allahabad
+
+
+# REFERENCES                    
+- "Digital Integrated circuits-A design perspective " by Jan M.Rabaey,Anantha Chandrakasan,Borvoje Nkouc.
+-  https://github.com/sonuagrawaljr/D_FlipFlop
+-  NPTEL video lectures on "CMOS DIGITAL VLSI DESIGN " by Prof.Sudeb Dasgupta
+- ”Analysis of Various Master-Slave 
+Configuration based D Flip-Flops “ by Shivali, 
+Shobha Sharma, Amita Dev.
+- Kanchan Sharma, K.G. Sharma and Tripti 
+Sharma, “Single Edge Triggered Static D Flip Flops: Performance Comparison”,Innovative 
+Systems Design and Engineering, 2015.
 
 
 
