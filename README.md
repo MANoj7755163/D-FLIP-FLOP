@@ -1,5 +1,6 @@
 # D-FLIP-FLOP
 D FLIP FLOP USING MASTER SLAVE CONFIGURATION
+
 The D flip flop is designed using 28nm CMOS technology by using Synopsys Custom Compiler
 
 
@@ -152,13 +153,14 @@ c-q(hl) was 49.5 psec.
 # POWER CALCULATION
 
 Steps to calculate the Avg Current
-Take Vdd node Current from the output option(Select from the Design). I have named it as current_ff
-Open the calculator from output option and select mean filter.
-Give Required values (current_ff, 200ps, 4.2n). We need to give the 3rd value as integer multiple of time period thats why i took it for 4 cycles(you can take any number of cycles)
-Now netlist and run the simulation
-Open viewer from the results option
-We can see the Avg Current value is 91.8704 amp
-POWER=VDD.Iavg=0.75*91.8704n=68.9028nW
+- Take Vdd node Current from the output option(Select from the Design). I have named it as current_ff
+- Open the calculator from output option and select mean filter.
+- Give Required values (current_ff, 200ps, 4.2n). We need to give the 3rd value as integer multiple of time period thats why i took it for 4 cycles(you can take any number of cycles)
+- Now netlist and run the simulation
+- Open viewer from the results option
+- We can see the Avg Current value is 91.8704 amp
+- POWER=VDD.Iavg=0.75*91.8704n=68.9028nW
+- 
 - PRIMEWAVE PARAMETERS
 The value of average current at Node vdd is calucalted for 1 GHZ clock frequency.
 ![Capture30](https://user-images.githubusercontent.com/100668140/156200758-8ba87151-6d85-4363-b019-543957b42b4a.PNG)
