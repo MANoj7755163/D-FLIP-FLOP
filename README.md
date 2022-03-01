@@ -25,7 +25,8 @@ Flip Flops are basic building blocks of digital electronic circuits used in comm
 
 A D (or Delay) Flip Flop shown in Figure is a digital electronic circuit used to delay the change of state of its output signal (Q) until the next rising edge of a clock timing input signal occurs. Flip Flop is a sequential circuit, which is used to store a single bit of information. Flip-Flop is an edgetriggered sequential block. The major applications of D flipflop are to introduce delay in timing circuit, as a buffer, sampling data at specific intervals.
 
-![image](https://user-images.githubusercontent.com/70645320/155837784-3cf8107f-c83f-493f-ae18-8bc76de1c2d8.png)    ![image](https://user-images.githubusercontent.com/70645320/155837790-f437d631-d031-48c9-a040-75542af2b22b.png)
+![image](https://user-images.githubusercontent.com/100668140/156182917-820b9942-7f82-46f7-92da-b14550992017.png)
+
 
 When the D input is provided to the Flip Flop, the circuit check for the clock signal is the signal of the clock is high (for level triggered d flip-flop) then with every clock pulse, the input D propagates to the output Q. For edge-triggered flipflop, the circuit check for the transition of clock pulse according to which the flip Flop propagates the input to the output; edge-triggered can be positive edge-triggered or negative triggered. Positive edge-triggered D flip-flop changes its output according to input with every transition of the clock pulse from 0 to 1. As for the negative edge-triggered D, flip-flop changes its output according to input with every transition of the clock pulse from 1 to 0.
 
