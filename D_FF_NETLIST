@@ -1,0 +1,86 @@
+*  Generated for: PrimeSim
+*  Design library name: cp_lib1
+*  Design cell name: cp_inv_tb
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+.param k=50p per_c=1n pwd_c='(0.4*per_c)' t1=5n t2=7n td_c=200p
++ tr_c='(0.1*per_c)' vddval=0.75
+*Custom Compiler Version S-2021.09
+*Tue Mar  1 11:40:55 2022
+
+.global gnd!
+********************************************************************************
+* Library          : cp_lib1
+* Cell             : cp_inv
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt cp_inv clk clkbar d_in q_out vdda vssa
+xm16 q_out net53 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm15 net59 clk net53 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm14 net60 clkbar net53 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm13 net60 q_out vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm12 net59 net63 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm5 net63 net48 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm4 net51 clkbar net48 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm3 net16 clk net48 vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm2 net16 net63 vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm1 net51 d_in vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm0 clkbar clk vssa vssa n105 w=0.1u l=0.03u nf=1 m=1
+xm21 q_out net53 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm20 net59 clkbar net53 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm19 net60 clk net53 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm18 net60 q_out vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm17 net59 net63 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm11 net63 net48 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm10 net51 clk net48 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm9 net16 clkbar net48 vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm8 net16 net63 vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm7 net51 d_in vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+xm6 clkbar clk vdda vdda p105 w=0.1u l=0.03u nf=1 m=1
+.ends cp_inv
+
+********************************************************************************
+* Library          : cp_lib1
+* Cell             : cp_inv_tb
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 clk clk_bar d_in q_out net2 gnd! cp_inv
+v1 net2 gnd! dc=0.75
+v3 clk_bar gnd! dc=0 pulse ( 'vddval' 0 'td_c' 'tr_c' 'tr_c' 'pwd_c' 'per_c' )
+v2 clk gnd! dc=0 pulse ( 0 'vddval' 'td_c' 'tr_c' 'tr_c' 'pwd_c' 'per_c' )
+c17 q_out gnd! c=1a
+v19 d_in gnd! dc=0 pwl ( 0 'vddval' 't1' 'vddval' '(t1+k)' 0.0 't2' 0.0 '(t2+k)'
++ 'vddval' td=0 )
+
+
+
+
+
+
+
+
+.tran '0.001*20n' '20n' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(d_in) v(q_out) v(clk)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
