@@ -149,12 +149,36 @@ c-q(hl) was 49.5 psec.
 
 ![d1](https://user-images.githubusercontent.com/100668140/156168645-9e8918e6-3460-4d27-ac14-b68f2be702b6.PNG)
 
+# POWER CALCULATION
+
+Steps to calculate the Avg Current
+Take Vdd node Current from the output option(Select from the Design). I have named it as current_ff
+Open the calculator from output option and select mean filter.
+Give Required values (current_ff, 200ps, 4.2n). We need to give the 3rd value as integer multiple of time period thats why i took it for 4 cycles(you can take any number of cycles)
+Now netlist and run the simulation
+Open viewer from the results option
+We can see the Avg Current value is 91.8704 amp
+POWER=VDD.Iavg=0.75*91.8704n=68.9028nW
+- PRIMEWAVE PARAMETERS
+The value of average current at Node vdd is calucalted for 1 GHZ clock frequency.
+![Capture30](https://user-images.githubusercontent.com/100668140/156200758-8ba87151-6d85-4363-b019-543957b42b4a.PNG)
+
+- TESTBENCH RESULTS
+The value of average current is 91.8704 amp.
+![Capture29](https://user-images.githubusercontent.com/100668140/156201031-6ad8f247-2842-41f3-a069-94a498cf11e6.PNG)
+
+- TESTBENCH WAVEFORM
+ ![Capture28](https://user-images.githubusercontent.com/100668140/156201221-8c1a5ee5-e808-44f6-a5c3-5c33addbac54.PNG)
+
+
 # SIMULATION RESULT
 
 - Set up time = -144p sec
 - Hold time = 0 p sec
 - Propagation delay,tcq(lh) =  45.5 p sec
                     tcq(hl) =  49.5 p sec 
+- Iavg= 91.8704n amp
+- power=68.9028n watts                    
                     
                     
 # AUTHOR
